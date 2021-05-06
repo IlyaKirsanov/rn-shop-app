@@ -34,10 +34,11 @@ const styles = StyleSheet.create({
 		padding: 10,
 		backgroundColor: 'white',
 		flexDirection: 'row',
-		justifyContent: 'stretch',
+		justifyContent: 'space-between',
 		marginHorizontal: 20
 	},
 	itemData: {
+		flex: 1,
 		flexDirection: 'row',
 		alignItems: 'center'
 	},
