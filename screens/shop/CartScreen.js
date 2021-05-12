@@ -42,14 +42,16 @@ const CartScreen = props => {
 		<FlatList
 			data={cartItems}
 			keyExtractor={item => item.productId}
-			renderItem={itemData => <CartItem
-				title={itemData.item.productTitle}
-				quantity={itemData.item.quantity}
-				amount={itemData.item.sum}
-				onRemove={() => {
-					dispatch(cartActions.removeFromCart(itemData.item.productId))
-				}}
-			/>}
+			renderItem={itemData =>
+				<CartItem
+					deleteable
+					title={itemData.item.productTitle}
+					quantity={itemData.item.quantity}
+					amount={itemData.item.sum}
+					onRemove={() => {
+						dispatch(cartActions.removeFromCart(itemData.item.productId))
+					}}
+				/>}
 		/>
 	</View>
 }
